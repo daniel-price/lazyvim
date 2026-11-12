@@ -4,3 +4,6 @@
 
 vim.g.ai_cmp = false
 vim.g.root_spec = { ".git", "lsp", "cwd" }
+
+-- zsh has no treesitter grammar; reuse bash (mini.ai af/if, highlights, etc.)
+vim.treesitter.language.register("bash", "zsh")

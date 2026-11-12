@@ -18,6 +18,14 @@ return {
             return { "--ignore-path", prettierignore .. "/.prettierignore" }
           end,
         },
+        shfmt = {
+          prepend_args = function(_, ctx)
+            if vim.bo[ctx.buf].filetype == "zsh" then
+              return { "-ln=zsh" }
+            end
+            return {}
+          end,
+        },
       },
       formatters_by_ft = {
         typescript = { "prettier" },
@@ -27,6 +35,8 @@ return {
         json = { "prettier" },
         yaml = { "prettier" },
         markdown = { "prettier" },
+        bash = { "shfmt" },
+        zsh = { "shfmt" },
       },
     },
   }
