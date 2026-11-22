@@ -1,4 +1,6 @@
-# 💤 LazyVim
+# Neovim
 
-A starter template for [LazyVim](https://github.com/LazyVim/LazyVim).
-Refer to the [documentation](https://lazyvim.github.io/installation) to get started.
+Personal configuration built on [LazyVim](https://www.lazyvim.org/).
+
+- Update plugins with `:Lazy update`, then commit `lazy-lock.json`.
+- Restore pinned plugin versions with `:Lazy restore`.
